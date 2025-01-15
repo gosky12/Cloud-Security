@@ -15,10 +15,10 @@ Ce site web a été développé dans le cadre de ma dernière année d'école d'
 ## Installation et exécution
 
 1. Clonez le dépôt :  
-   git clone https://github.com/yourusername/yourrepository.git
+   git clone https://github.com/gosky12/projet-securite-cloud.git
 
 2. Accédez au répertoire du projet :  
-   cd yourrepository
+   cd projet-securite-cloud
 
 3. Installez les dépendances :  
    npm install
