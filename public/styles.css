@@ -1,0 +1,469 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.login-background, .register-background {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-background {
+    background: url('./Images/netflix-background.jpg') no-repeat center center/cover;
+}
+
+.register-background {
+    background: url('./Images/netflix-background.jpg') no-repeat center center/cover;
+}
+
+.login-overlay, .register-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-message-register {
+    margin-bottom: 10px; 
+    font-size: 14px;     
+    color: red;          
+    text-align: left; 
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.register-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-container, .register-container {
+    background: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.login-container {
+    width: 300px;
+}
+
+.register-container {
+    width: 350px;
+    margin-top: 30px;
+}
+
+.register-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.register-overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+    max-width: 600px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    background: #333;
+    border: none;
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+form button {
+    background: #e50914;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #f40612;
+}
+
+.help-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.help-options a {
+    color: #b3b3b3;
+    text-decoration: none;
+}
+
+.help-options a:hover {
+    text-decoration: underline;
+}
+
+.signup-prompt {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-prompt a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
+
+.signup-prompt .small-text {
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+.home-page .home-background {
+    background-color: #141414;
+    min-height: 100vh;
+    color: #fff;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home-page nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #000;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.home-page .logo {
+    color: #e50914;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.home-page nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.home-page nav ul li {
+    margin-left: 20px;
+}
+
+.home-page nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.home-page a:hover {
+    text-decoration: underline;
+}
+
+.home-page .series-list {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-page .series-list h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.home-page .series {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.home-page .series-item {
+    position: relative;
+    width: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.home-page .series-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+}
+
+.home-page .series-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.home-page .series-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.home-page .movies {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.home-page .movies h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.home-page .movie-items {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.home-page .movie-item {
+    position: relative;
+    width: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-snap-align: start;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.home-page .movie-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+}
+
+.home-page .movie-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+}
+
+.home-page .movie-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.home-page .series::-webkit-scrollbar, .home-page .movies::-webkit-scrollbar {
+    display: none;
+}
+
+.home-page .series, .home-page .movies {
+    scrollbar-width: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #141414;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar-logo {
+    font-size: 24px;
+    color: #e50914;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 20px;
+}
+
+.sidebar-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+    color: #e50914;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sign-out {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    background-color: #e50914;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.sign-out:hover {
+    background-color: #b00710;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.main-content section {
+    margin-bottom: 40px;
+}
+
+.home-page .series, .home-page .movies {
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    display: flex;
+}
+
+.home-page .series::-webkit-scrollbar, .home-page .movies::-webkit-scrollbar {
+    display: none;
+}
+
+.home-page .series-item:last-child, .home-page .movie-item:last-child {
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.home-page .series, .home-page .movies {
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+.home-page .series-item:last-child, .home-page .movie-item:last-child {
+    margin-right: 0;
+}
+
+.home-page .series-item, .home-page .movie-item {
+    position: relative;
+    width: 220px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    scroll-snap-align: start;
+    margin-right: 20px;
+}
+
+.home-page .series-item:hover, .home-page .movie-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+.home-page .series, .home-page .movies {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.home-page .series::-webkit-scrollbar, .home-page .movies::-webkit-scrollbar {
+    display: none;
+}
+
+.home-page .series-item, .home-page .movie-item {
+    position: relative;
+    z-index: 0;
+    transition: transform 0.3s ease-in-out;
+    box-sizing: border-box;
+}
+
+.home-page .series-item:last-child, .home-page .movie-item:last-child {
+    margin-right: 0;
+    flex-shrink: 0;
+}

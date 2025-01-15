@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Netwish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="login-background">
+        <div class="login-overlay">
+            <div class="login-container">
+                <h1>Sign In</h1>
+                <% if (errorMessage) { %>
+                    <div id="error-message" class="error-message" style="color: red;">
+                        <%= errorMessage %>
+                    </div>
+                <% } %>
+                <form action="/login" method="post">
+                    <input type="email" name="email" placeholder="Email or phone number" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <button type="submit">Sign In</button>
+                    <div class="help-options">
+                         <label>
+                            <input type="checkbox"> Remember me
+                        </label>
+                        <a href="#">Need help?</a>
+                    </div>
+                </form>
+                <div class="signup-prompt">
+                    <p>New to Netwish? <a href="/register">Sign up now</a>.</p>
+                    <p class="small-text">This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
