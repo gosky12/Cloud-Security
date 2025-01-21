@@ -23,11 +23,15 @@ Ce site web a été développé dans le cadre de ma dernière année d'école d'
 3. Installez les dépendances :  
    npm install
 
-4. Lancez l'application :  
+4. Mettez à jour les informations de connexion à la base de données dans le fichier `server.js`.
+
+5. Modifiez l'adresse IP et le port du site dans le fichier `server.js`.
+
+6. Lancez l'application :  
    node server.js
 
-5. Accédez au site web :  
-   Ouvrez votre navigateur et rendez-vous sur [http://localhost:3000](http://localhost:3000) (ou tout autre port configuré dans `server.js`).
+7. Accédez au site web :  
+   Ouvrez votre navigateur et rendez-vous sur [http://<adresse_ip>:3000](http://<adresse_ip>:3000) (ou tout autre port configuré dans `server.js`).
 
 ---
 
