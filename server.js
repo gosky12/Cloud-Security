@@ -30,7 +30,7 @@ require('dotenv').config();
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-const secret_name = "rds!db-e1a9bd1e-76ec-4f14-9aee-c6203a0a1c5d";
+const secret_name = "rds!db-92c60ac3-3eac-46ff-8e3d-3c11d9b00d96";
 const client = new SecretsManagerClient({ region: "eu-west-3" });
 
 async function getDBCredentials() {
@@ -59,7 +59,7 @@ async function connectToDatabase() {
         const credentials = await getDBCredentials();
 
         db = mysql.createConnection({
-            host: "netwish.clqkyo2eoald.eu-west-3.rds.amazonaws.com",
+            host: "netwishdbs.clqkyo2eoald.eu-west-3.rds.amazonaws.com",
             user: credentials.username,
             password: credentials.password,
             database: "netwish",
