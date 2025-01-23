@@ -120,8 +120,8 @@ app.get('/home', (req, res) => {
 const validateRegistration = [
     body('email').isEmail().withMessage('Email invalide'),
     body('password')
-        .isLength({ min: 6 })
-        .withMessage('Le mot de passe doit faire au moins 6 caractères')
+        .isLength({ min: 9 })
+        .withMessage('Le mot de passe doit faire au moins 9 caractères')
         .matches(/[a-z]/)
         .withMessage('Le mot de passe doit contenir au moins une lettre minuscule')
         .matches(/[A-Z]/)
